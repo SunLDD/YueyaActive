@@ -15,7 +15,7 @@
 		var timeOut = document.getElementById('timeOut'),// 当前的时间的id
 			locTime = timeOut.innerText;
 
-		var locIndex = window.location.href.indexOf("yueyaActive"),
+		var locIndex = window.location.href.indexOf("shanyu.Z"),
 			locHref = window.location.href.substr(0, locIndex+8);
 
 		var time = function(){
