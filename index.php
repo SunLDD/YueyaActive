@@ -3,7 +3,7 @@
 <head>
 	<title>剧场</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="static/css/stylecss" />
+	<link rel="stylesheet" type="text/css" href="static/css/style.css" />
 	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
 </head>
 <body>
@@ -12,17 +12,23 @@
 			<video id="vedio" preload="preload" controls="controls" type="video/mp4">
 				<source src="./static/video/test.mp4" type="video/mp4" />
 			</video>
-			<video id="vedio1" preload="preload" controls="controls" type="video/mp4">
+			<video id="vedio1" preload="preload" controls="controls" autoplay="autoplay" type="video/mp4">
 				<source src="./static/video/test1.mp4" type="video/mp4" />
 			</video>
-			<video id="vedio2" preload="preload" controls="controls" type="video/mp4">
-				<source src="./static/video/test1.mp4" type="video/mp4" />
-			</video>
-			<video id="vedio3" preload="preload" controls="controls" type="video/mp4">
+			<video id="vedio2" preload="preload" controls="controls" autoplay="autoplay" type="video/mp4">
 				<source src="./static/video/test2.mp4" type="video/mp4" />
 			</video>
-			<video id="vedio4" preload="preload" controls="controls" type="video/mp4">
+			<video id="vedio3" preload="preload" controls="controls" autoplay="autoplay" type="video/mp4">
+				<source src="./static/video/test2.mp4" type="video/mp4" />
+			</video>
+			<video id="vedio4" preload="preload" controls="controls" autoplay="autoplay" type="video/mp4">
 				<source src="./static/video/test1.mp4" type="video/mp4" />
+			</video>
+			<video id="vedio5" preload="preload" controls="controls" autoplay="autoplay" type="video/mp4">
+				<source src="./static/video/test1.mp4" type="video/mp4" />
+			</video>
+			<video id="vedio6" preload="preload" controls="controls" autoplay="autoplay" type="video/mp4">
+				<source src="./static/video/test2.mp4" type="video/mp4" />
 			</video>
 		</div>
 		<!-- <button id="play-pause">播放</button> -->
@@ -44,42 +50,92 @@
 					$(".show-box").fadeIn();
 				}
 			});
-
+			//第一次选择
 			$(".btn1").click(function(){
 				$(".show-box").fadeOut();
-				$("#w3s").attr({
-     				"source":"./static/video/test1.mp4"
-    			});
 				$("#vedio").css("display","none");
 				$("#vedio1").css("display","block");
-				//$("source").replaceWith("<source src="./static/video/test1.mp4" type="video/mp4" />");
 			});
-			$(".btn2").click(function(){
-				$(".show-box").fadeOut();
-				$("#vedio").css("display","none");
-				$("#vedio1").css("display","block");
-				//$("source").replaceWith("<source src="./static/video/test2.mp4" type="video/mp4" />");
-			});
-			var video = $("video:eq(0)");
+			var video = $("video:eq(1)");
 			video.bind('timeupdate', function() {
 				var _this = $(this)[0];// 这里的0代表当前的视频 
-				if ( ( _this.currentTime != 0 ) && (_this.duration == _this.currentTime) ){
+				if ( ( _this.currentTime != 1 ) && (_this.duration == _this.currentTime) ){
 					$(".btn1").html("剧情发展1");
 					$(".btn2").html("剧情发展2");
 					$(".show-box").fadeIn();
 				}
 			});
-			$(".btn1").click(function(){
-				$(".show-box").fadeOut();
-				$("#vedio").css("display","none");
-				$("#vedio1").css("display","block");
-				//$("source").replaceWith("<source src="./static/video/test2.mp4" type="video/mp4" />");
-			});
 			$(".btn2").click(function(){
 				$(".show-box").fadeOut();
 				$("#vedio").css("display","none");
 				$("#vedio2").css("display","block");
-				//$("source").replaceWith("<source src="./static/video/test1.mp4" type="video/mp4" />");
+			});
+			var video = $("video:eq(2)");
+			video.bind('timeupdate', function() {
+				var _this = $(this)[0];// 这里的0代表当前的视频 
+				if ( ( _this.currentTime != 2 ) && (_this.duration == _this.currentTime) ){
+					$(".btn1").html("剧情发展1");
+					$(".btn2").html("剧情发展2");
+					$(".show-box").fadeIn();
+				}
+			});
+			//第二次选择
+			$(".btn1").click(function(){
+				$(".show-box").fadeOut();
+				$("#vedio1").css("display","none");
+				$("#vedio3").css("display","block");
+			});
+			var video = $("video:eq(3)");
+			video.bind('timeupdate', function() {
+				var _this = $(this)[0];// 这里的0代表当前的视频 
+				if ( ( _this.currentTime != 3 ) && (_this.duration == _this.currentTime) ){
+					$(".btn1").html("剧情发展3");
+					$(".btn2").html("剧情发展4");
+					$(".show-box").fadeIn();
+				}
+			});
+			$(".btn2").click(function(){
+				$(".show-box").fadeOut();
+				$("#vedio2").css("display","none");
+				$("#vedio4").css("display","block");
+			});
+			var video = $("video:eq(4)");
+			video.bind('timeupdate', function() {
+				var _this = $(this)[0];// 这里的0代表当前的视频 
+				if ( ( _this.currentTime != 4 ) && (_this.duration == _this.currentTime) ){
+					$(".btn1").html("剧情发展3");
+					$(".btn2").html("剧情发展4");
+					$(".show-box").fadeIn();
+				}
+			});
+			//第三次选择
+			$(".btn1").click(function(){
+				$(".show-box").fadeOut();
+				$("#vedio3").css("display","none");
+				$("#vedio5").css("display","block");
+			});
+			var video = $("video:eq(5)");
+			video.bind('timeupdate', function() {
+				var _this = $(this)[0];// 这里的0代表当前的视频 
+				if ( ( _this.currentTime != 5 ) && (_this.duration == _this.currentTime) ){
+					$(".btn1").html("剧情发展5");
+					$(".btn2").html("剧情发展6");
+					$(".show-box").fadeIn();
+				}
+			});
+			$(".btn2").click(function(){
+				$(".show-box").fadeOut();
+				$("#vedio4").css("display","none");
+				$("#vedio6").css("display","block");
+			});
+			var video = $("video:eq(6)");
+			video.bind('timeupdate', function() {
+				var _this = $(this)[0];// 这里的0代表当前的视频 
+				if ( ( _this.currentTime != 6 ) && (_this.duration == _this.currentTime) ){
+					$(".btn1").html("剧情发展5");
+					$(".btn2").html("剧情发展6");
+					$(".show-box").fadeIn();
+				}
 			});
 		});
 		// });

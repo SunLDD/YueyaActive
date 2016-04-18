@@ -10,10 +10,6 @@ li{
 	display: none;
 }
 
-#vedio{
-	display: block;
-}
-
 #vedio1{
 	display: none;
 }
@@ -27,6 +23,14 @@ li{
 }
 
 #vedio4{
+	display: none;
+}
+
+#vedio5{
+	display: none;
+}
+
+#vedio6{
 	display: none;
 }
 
