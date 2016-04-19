@@ -51,7 +51,7 @@
 				}
 			});
 			//第一次选择
-			$(".btn1").click(function(){
+			$(".btn1").bind("click",function(){
 				$(".show-box").fadeOut();
 				$("video").css("display","none");
 				$("#vedio1").css("display","block");
@@ -65,7 +65,7 @@
 					$(".show-box").fadeIn();
 				}
 			});
-			$(".btn2").click(function(){
+			$(".btn2").bind("click",function(){
 				$(".show-box").fadeOut();
 				$("video").css("display","none");
 				$("#vedio2").css("display","block");
@@ -80,13 +80,13 @@
 				}
 			});
 			//第二次选择
-			$(".btn1").click(function(){
+			$(".btn1").bind("click",function(){
 				$(".show-box").fadeOut();
 				$("video").css("display","none");
 				$("#vedio3").css("display","block");
 			});
 			var video = $("video:eq(3)");
-			video.bind('timeupdate', function() {
+			video.bind('timeupdate',function() {
 				var _this = $(this)[0];// 这里的0代表当前的视频 
 				if ( ( _this.currentTime != 3 ) && (_this.duration == _this.currentTime) ){
 					$(".btn1").html("剧情发展5");
@@ -94,7 +94,7 @@
 					$(".show-box").fadeIn();
 				}
 			});
-			$(".btn2").click(function(){
+			$(".btn2").bind("click",function(){
 				$(".show-box").fadeOut();
 				$("video").css("display","none");
 				$("#vedio4").css("display","block");
@@ -109,7 +109,7 @@
 				}
 			});
 			//第三次选择
-			$(".btn1").click(function(){
+			$(".btn1").bind("click",function(){
 				$(".show-box").fadeOut();
 				$("video").css("display","none");
 				$("#vedio5").css("display","block");
@@ -123,7 +123,7 @@
 					$(".show-box").fadeIn();
 				}
 			});
-			$(".btn2").click(function(){
+			$(".btn2").bind("click",function(){
 				$(".show-box").fadeOut();
 				$("video").css("display","none");
 				$("#vedio6").css("display","block");
